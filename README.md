@@ -1,17 +1,17 @@
-## DraftKingsPredictions
+## Draft Kings Predictions Project
 
 For this project, I attempted to create a system for effectively predicting Draft Kings daily fantasy basketball line-ups. The rules of Draft Kings are as follows:
 
-Everyday fantasy users may create their fantasy lineups based on the players who are playing in games across the NBA. Everyone is alloted $50000 to build their line-up, and each player is assigned a particular salary based on DraftKings projected score. The goal is to score as many points as possibe with the alloted salary.
+Everyday fantasy users may create their fantasy lineups based on the players who are playing in games across the NBA. Everyone is allotted $50000 to build their line-up, and each player is assigned a particular salary based on DraftKings projected score. The goal is to score as many points as possible with the allotted salary.
 
 Users can play in head to head matchups against other users, or in large pools of players with big prizes for the winners.
 
-Line-ups consist of 8 players and are restricted based on draft kings positions.
+Line-ups consist of 8 players and are restricted based on DraftKings positions.
 
 <img width="677" alt="pic" src="https://user-images.githubusercontent.com/19575713/44431290-9e85ab00-a55a-11e8-8dfd-5cae1be05c14.png">
 
 
-I'm treating this like a work in progress that will certainly need to be adjusted and updated as I start betting with it when the NBA season starts. I tried a lot of different approaches, and ultimetly produced a solid result.
+I'm treating this like a work in progress that will certainly need to be adjusted and updated as I start betting with it when the NBA season starts. I tried a lot of different approaches, and ultimately produced a solid result.
 
 I wanted the process to require minimal effort, so I tried to make the process replicable without much effort - I don't want to have to do a lot of work each day to prepare the data and re-train my model(s).
 
@@ -19,7 +19,7 @@ Below are the approaches I took to in this project.
 
 ### Downloading and organizing the Data.
 
-For the Draft Kings and NBA Boxscore data, I purchased historical data from bigdataball.com. I plan on subscribing to their daily datasets during the season.
+For the Draft Kings and NBA Box score data, I purchased historical data from bigdataball.com. I plan on subscribing to their daily datasets during the season.
 
 For the player stats data I scrapped this website: 
 https://www.basketball-reference.com/leagues/NBA_2018_per_game.html#per_game_stats::none
@@ -34,10 +34,10 @@ https://github.com/billyhansen6/DraftKingsPredictions/blob/master/Basketball%20P
 
 I simply cleaned up the downloaded datasets and exported them into csv files that are organized in a way that makes pulling them into SQL an easy process.
 
-### Uploading into PostgeSQL database
+### Uploading into PostgreSQL database
 
 
-I used the following code to upload data into various tables in a postgreSQL database.
+I used the following code to upload data into various tables in a PostgreSQL database.
 
 https://github.com/billyhansen6/DraftKingsPredictions/blob/master/DraftKingsProject.sql
 
@@ -53,7 +53,7 @@ This process included data cleaning, feature engineering, and feature scaling.
 
 The independent variables that my model used were the following:
 
-- avg_ast - Players average assits per game
+- avg_ast - Players average assists per game
 - avg_blk - Players average blocks per game
 - avg_pts - Players average points per game
 - avg_reb - Players average rebounds per game
@@ -61,13 +61,13 @@ The independent variables that my model used were the following:
 - avg_threes - Players average threes per game
 - avg_tov - Players average turnovers per game
 - opp_defeff - Opponents defensive efficiency
-- opp_offeff - opponents offensive efficieny
+- opp_offeff - opponents offensive efficiency
 - opp_pace - Opponents pace of play
 - opp_reb_rate - Opponents rebound rate.
 - opp_tov - Opponents turnovers per game.
 - rest - How many days off before the last game.
 - team_ast - How many assists does player's team average
-- team_defeff - Player's team defensive efficieny
+- team_defeff - Player's team defensive efficiency
 - team_offeff - Player's team offensive efficiency
 - team_pace - Player's team pace
 - team_reb_rate - Player's team rebound rate
@@ -96,20 +96,20 @@ The feature engineering step was especially important. The model improved drasti
 
 The models I tried were the following:
 
-Multiple Linear Regression
-Random Forest
-XGboost
-Artifical Nueral Network
-Support Vector Machine
-Ensemble between MLR, ANN and Random Forest
+- Multiple Linear Regression
+- Random Forest
+- XGboost
+- Artificial Neural Network
+- Support Vector Machine
+- Ensemble between MLR, ANN and Random Forest
 
-All models yielded somewhat similar results, but surprisingly, the simple, multiple linear regression model was the best performing one. The ensemble learning model was just about as good, but for simplicity's sake I went with the MLR model for my predictions. I'm considering paying for another expert's predictions and ensembling their's with my top 2 or 3 models when the season starts.
+All models yielded somewhat similar results, but surprisingly, the simple, multiple linear regression model was the best performing one. The ensemble learning model was just about as good, but for simplicity's sake I went with the MLR model for my predictions. I'm considering paying for another expert's predictions and ensemble-ing their model with my top 2 or 3 models when the season starts.
 
-The dataset included about 45 thousand rows. To test my model I used K-Fold Cross validation on 20% of the dataset. The best performing models had a mean squared error of about 33, and an R2 score of about .82.
+The dataset included about 45 thousand rows. To test my model, I used K-Fold Cross validation on 20% of the dataset. The best performing models had a mean squared error of about 33, and an R2 score of about .82.
 
 ### Optimization of lineups
 
-Optimization is something that I didn't have any experience in before this project. I borrowed the code from this github repository to complete this step: https://github.com/coaltunbey/nba-lineup-optimization/blob/master/main.ipynb
+Optimization is something that I didn't have any experience in before this project. I borrowed the code from this GitHub repository to complete this step: https://github.com/coaltunbey/nba-lineup-optimization/blob/master/main.ipynb
 
 The purpose of this step is to use the predictions the create the optimal line-up (get the most amount of projected points for $50000).
 
@@ -117,9 +117,9 @@ Here is my (mostly borrowed) code for completing this step (Optimization at the 
 
 ### Tableau Dashboard
 
-It became clear to me that the best DraftKings fantasy experts are not simply cranking out optomized models everyday - they deal with many other factors like injuries, varience and stacking players on the same team together, etc...
+It became clear to me that the best DraftKings fantasy experts are not simply cranking out optimized models everyday - they deal with many other factors like injuries, variance and stacking players on the same team together, etc...
 
-I decided to create a Tableau dashboard with the data so I could try to derive insights and potentially use them to modify line-ups.
+I decided to create a Tableau dashboard with the data, so I could try to derive insights and potentially use them to modify line-ups.
 
 The dashboard is located here: https://public.tableau.com/profile/billy.hansen#!/vizhome/DraftKingsData/PlayerStats
 
@@ -128,6 +128,7 @@ This dashboard is interactive and can drill down on specific metrics of interest
 ### Automate Process
 
 I decided that I might not want to use PostgreSQL every day, and that if I could join all the data in python I could save an extra step. Here is code in python that can complete the entire process in one shot: https://github.com/billyhansen6/DraftKingsPredictions/blob/master/Auto-2.ipynb
+
 
 
 
