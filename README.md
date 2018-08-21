@@ -53,42 +53,42 @@ This process included data cleaning, feature engineering, and feature scaling.
 
 The independent variables that my model used were the following:
 
-'avg_ast - Players average assits per game
-'avg_blk - Players average blocks per game
-'avg_pts - Players average points per game
-'avg_reb - Players average rebounds per game
-'avg_stl - Players average steals per game
-'avg_threes - Players average threes per game
-'avg_tov - Players average turnovers per game
-'opp_defeff - Opponents defensive efficiency
-'opp_offeff - opponents offensive efficieny
-'opp_pace - Opponents pace of play
-'opp_reb_rate - Opponents rebound rate.
-'opp_tov - Opponents turnovers per game.
-'rest - How many days off before the last game.
-'team_ast - How many assists does player's team average
-'team_defeff - Player's team defensive efficieny
-'team_offeff - Player's team offensive efficiency
-'team_pace - Player's team pace
-'team_reb_rate - Player's team rebound rate
-'team_tov - Player's team Turnover's per game.
-'venue - Home or away
+- avg_ast - Players average assits per game
+- avg_blk - Players average blocks per game
+- avg_pts - Players average points per game
+- avg_reb - Players average rebounds per game
+- avg_stl - Players average steals per game
+- avg_threes - Players average threes per game
+- avg_tov - Players average turnovers per game
+- opp_defeff - Opponents defensive efficiency
+- opp_offeff - opponents offensive efficieny
+- opp_pace - Opponents pace of play
+- opp_reb_rate - Opponents rebound rate.
+- opp_tov - Opponents turnovers per game.
+- rest - How many days off before the last game.
+- team_ast - How many assists does player's team average
+- team_defeff - Player's team defensive efficieny
+- team_offeff - Player's team offensive efficiency
+- team_pace - Player's team pace
+- team_reb_rate - Player's team rebound rate
+- team_tov - Player's team Turnover's per game.
+- venue - Home or away
 
 - The independent variables below were engineered from the available data.
 
-'avg_points_vs_opp - Player's average fantasy points vs. given opponent.
-'opp_pos_avg - Average fantasy points that opponent gives up vs. player's position.
-'fantasy_points_AVG10 - Average fantasy points in previous 10 games.
-'minutes_AVG10 - Average minutes in last 10 games.
-'opp_defeff_AVG10 - Opponents defensive efficiency in last 10 games.
-'team_offeff_AVG10 - Team's offensive efficiency in last 10 games.
-'usage_rate_AVG10 - Player's usage rate in last 10 games.
-'opp_pos_avg_AVG10 - Opponents position average in last 10 games.
-'fantasy_points_AVG3 - Average fantasy points in previous 3 games.
-'minutes_AVG3 - Average minutes in last 3 games.
-'opp_defeff_AVG3 - Opponents defensive efficiency in last 3 games.
-'team_offeff_AVG3 - Team's offensive efficiency in last 3 games.
-'usage_rate_AVG3 - - Player's usage rate in last 3 games.
+- avg_points_vs_opp - Player's average fantasy points vs. given opponent.
+- opp_pos_avg - Average fantasy points that opponent gives up vs. player's position.
+- fantasy_points_AVG10 - Average fantasy points in previous 10 games.
+- minutes_AVG10 - Average minutes in last 10 games.
+- opp_defeff_AVG10 - Opponents defensive efficiency in last 10 games.
+- team_offeff_AVG10 - Team's offensive efficiency in last 10 games.
+- usage_rate_AVG10 - Player's usage rate in last 10 games.
+- opp_pos_avg_AVG10 - Opponents position average in last 10 games.
+- fantasy_points_AVG3 - Average fantasy points in previous 3 games.
+- minutes_AVG3 - Average minutes in last 3 games.
+- opp_defeff_AVG3 - Opponents defensive efficiency in last 3 games.
+- team_offeff_AVG3 - Team's offensive efficiency in last 3 games.
+- usage_rate_AVG3 - - Player's usage rate in last 3 games.
 
 The dependent variable that I was trying to predict was the fantasy points scored.
 
