@@ -107,8 +107,21 @@ Optimization is something that I didn't have any experience in before this proje
 
 The purpose of this step is to use the predictions the create the optimal line-up (get the most amount of projected points for $50000).
 
-Here is my (mostly borrowed) code for completing this step: 
+Here is my (mostly borrowed) code for completing this step (Optimization at the end): https://github.com/billyhansen6/DraftKingsPredictions/blob/master/Auto-2.ipynb
 
 ### Tableau Dashboard
 
-It became clear to me that
+It became clear to me that the best DraftKings fantasy experts are not simply cranking out optomized models everyday - they deal with many other factors like injuries, varience and stacking players on the same team together, etc...
+
+I decided to create a Tableau dashboard with the data so I could try to derive insights and potentially use them to modify line-ups.
+
+The dashboard is located here: https://public.tableau.com/profile/billy.hansen#!/vizhome/DraftKingsData/PlayerStats
+
+This dashboard is interactive and can drill down on specific metrics of interest.
+
+### Automate Process
+
+I decided that I might not want to use PostgreSQL every day, and that if I could join all the data in python I could save an extra step. Here is code in python that can complete the entire process in one shot: https://github.com/billyhansen6/DraftKingsPredictions/blob/master/Auto-2.ipynb
+
+
+
