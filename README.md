@@ -1,6 +1,12 @@
 ## DraftKingsPredictions
 
-For this project, I attempted to create a system for effectively predicting Draft Kings daily fantasy basketball line-ups. 
+For this project, I attempted to create a system for effectively predicting Draft Kings daily fantasy basketball line-ups. The rules of Draft Kings are as follows:
+
+Everyday fantasy users may create their fantasy lineups based on the players who are playing in games across the NBA. Everyone is alloted $50000 to build their line-up, and each player is assigned a particular salary based on DraftKings projected score. The goal is to score as many points as possibe with the alloted salary.
+
+Users can play in head to head matchups against other users, or in large pools of players with big prizes for the winners.
+
+Line-ups consist of 8 players and are restricted based on draft kings positions.
 
 <img width="677" alt="pic" src="https://user-images.githubusercontent.com/19575713/44431290-9e85ab00-a55a-11e8-8dfd-5cae1be05c14.png">
 
