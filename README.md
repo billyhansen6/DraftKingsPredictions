@@ -21,10 +21,10 @@ Below are the approaches I took to in this project.
 
 For the Draft Kings and NBA Box score data, I purchased historical data from bigdataball.com. I plan on subscribing to their daily datasets during the season.
 
-For the player stats data I scrapped this website: 
+For the player stats data I scraped this website: 
 https://www.basketball-reference.com/leagues/NBA_2018_per_game.html#per_game_stats::none
 
-For the team stats data I scrapped this website: http://www.espn.com/nba/hollinger/teamstats
+For the team stats data I scraped this website: http://www.espn.com/nba/hollinger/teamstats
 
 
 ### Cleaning data and preparing it for SQL
